@@ -11,7 +11,7 @@ const Shipment = () => {
     const savedCart = getDatabaseCart;
     const orderDetail = {...setLoggedInUser, products: savedCart, shipment: data, orderTime: new Date()};
 
-    fetch('http://localhost:3001/addOrder', {
+    fetch('https://secure-citadel-27901.herokuapp.com/addOrder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
